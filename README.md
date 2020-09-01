@@ -1,16 +1,16 @@
-# Ember-FusionCharts
+# Ember-FroalaCharts
 
-A lightweight EmberJS component which provides bindings for FusionCharts JavaScript Charting Library. It easily adds rich and interactive charts to any ambitious Ember application.
+A lightweight EmberJS component which provides bindings for FroalaCharts JavaScript Charting Library. It easily adds rich and interactive charts to any ambitious Ember application.
 
-## [Demo](https://fusioncharts.github.io/ember-fusioncharts/)
+## [Demo](https://froalacharts.github.io/ember-froalacharts/)
 
-- Github Repo: [https://github.com/fusioncharts/ember-fusioncharts](https://github.com/fusioncharts/ember-fusioncharts)
-- Documentation: [https://www.fusioncharts.com/dev/getting-started/ember/your-first-chart-using-ember](https://www.fusioncharts.com/dev/getting-started/ember/your-first-chart-using-ember)
-- Support: [https://www.fusioncharts.com/contact-support](https://www.fusioncharts.com/contact-support)
-- FusionCharts
-  - Official Website: [https://www.fusioncharts.com/](https://www.fusioncharts.com/)
-  - Official NPM Package: [https://www.npmjs.com/package/fusioncharts](https://www.npmjs.com/package/fusioncharts)
-- Issues: [https://github.com/fusioncharts/ember-fusioncharts/issues](https://github.com/fusioncharts/ember-fusioncharts/issues)
+- Github Repo: [https://github.com/froalacharts/ember-froalacharts](https://github.com/froalacharts/ember-froalacharts)
+- Documentation: [https://www.froalacharts.com/dev/getting-started/ember/your-first-chart-using-ember](https://www.froalacharts.com/dev/getting-started/ember/your-first-chart-using-ember)
+- Support: [https://www.froalacharts.com/contact-support](https://www.froalacharts.com/contact-support)
+- FroalaCharts
+  - Official Website: [https://www.froalacharts.com/](https://www.froalacharts.com/)
+  - Official NPM Package: [https://www.npmjs.com/package/froalacharts](https://www.npmjs.com/package/froalacharts)
+- Issues: [https://github.com/froalacharts/ember-froalacharts/issues](https://github.com/froalacharts/ember-froalacharts/issues)
 
 ---
 
@@ -32,37 +32,37 @@ A lightweight EmberJS component which provides bindings for FusionCharts JavaScr
 ### Requirements
 
 - **Node.js**, **NPM/Yarn** installed globally in your OS.
-- **FusionCharts** and **Ember** installed in your project, as detailed
+- **FroalaCharts** and **Ember** installed in your project, as detailed
 
 ## Installation
 
 **Direct Download**
-All binaries are located on our [github repository](https://github.com/fusioncharts/ember-fusioncharts/).
+All binaries are located on our [github repository](https://github.com/froalacharts/ember-froalacharts/).
 
 **Install from NPM**
 
-To install `ember-fusioncharts` to any existing ember project, run:
+To install `ember-froalacharts` to any existing ember project, run:
 
 For Modern Ember CLI:
 
 ```bash
-$ npm install ember-fusioncharts --save
+$ npm install ember-froalacharts --save
 ```
 
 For Earlier Ember CLI (and addon developers):
 
 ```bash
-$ npm install ember-fusioncharts --save-dev
-$ ember g ember-fusioncharts
+$ npm install ember-froalacharts --save-dev
+$ ember g ember-froalacharts
 ```
 
-Then install `fusioncharts` to your project:
+Then install `froalacharts` to your project:
 
 ```bash
-$ npm install fusioncharts --save
+$ npm install froalacharts --save
 ```
 
-Then import `fusioncharts` library to your `ember-cli-build.js` build file:
+Then import `froalacharts` library to your `ember-cli-build.js` build file:
 
 ```javascript
 /* eslint-env node */
@@ -75,10 +75,9 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  // Import fusioncharts library
-  app.import('node_modules/fusioncharts/fusioncharts.js');
-  app.import('node_modules/fusioncharts/fusioncharts.charts.js');
-  app.import('node_modules/fusioncharts/themes/fusioncharts.theme.fusion.js');
+  // Import froalacharts library
+  app.import('node_modules/froalacharts/froalacharts.js');
+  // app.import('node_modules/froalacharts/themes/froalacharts.theme.fusion.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -99,7 +98,7 @@ module.exports = function(defaults) {
 
 ## Quick Start
 
-After installing `ember-fusioncharts`, create a simple component(e.g. `chart-viewer`, also you can use it anywhere in your application) to show your interactive charts, run:
+After installing `ember-froalacharts`, create a simple component(e.g. `chart-viewer`, also you can use it anywhere in your application) to show your interactive charts, run:
 
 ```bash
 $ ember g component chart-viewer
@@ -142,21 +141,21 @@ const myDataSource = {
 };
 
 export default Component.extend({
-  title: 'Ember FusionCharts Sample',
+  title: 'Ember FroalaCharts Sample',
   width: 600,
   height: 400,
-  type: 'column2d',
+  type: 'column',
   dataFormat: 'json',
   dataSource: myDataSource
 });
 ```
 
-And use `fusioncharts-xt` component in your `chart-viewer.hbs` template to show your charts:
+And use `froalacharts-xt` component in your `chart-viewer.hbs` template to show your charts:
 
 ```html
 <h1>{{ title }}</h1>
 
-{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat
+{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat
 dataSource=dataSource}}
 ```
 
@@ -176,7 +175,7 @@ import Component from '@ember/component';
 export default Component.extend({
   width: 600,
   height: 400,
-  type: 'column2d',
+  type: 'column',
   dataFormat: 'json',
   dataSource: {
     chart: {
@@ -252,7 +251,7 @@ export default Component.extend({
 In your template file:
 
 ```html
-{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat
+{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat
 dataSource=dataSource events=events}}
 
 <p>{{ message }}</p>
@@ -262,20 +261,20 @@ Using this example when you hover on a dataplot you will get to see the value an
 
 ## Working with events
 
-To attach event listeners to FusionCharts, you can use the `events` attribute in the `fusioncharts-xt` template.
+To attach event listeners to FroalaCharts, you can use the `events` attribute in the `froalacharts-xt` template.
 
 In your template file:
 
 ```html
-{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat
+{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat
 dataSource=dataSource events=events}}
 ```
 
 ## Usage and integration of FusionTime
 
-From `fusioncharts@3.13.3-sr.1` and `ember-fusioncharts@2.0.0`, You can visualize timeseries data easily with vue.
+From `froalacharts@3.13.3-sr.1` and `ember-froalacharts@2.0.0`, You can visualize timeseries data easily with vue.
 
-Learn more about FusionTime [here](https://www.fusioncharts.com/fusiontime).
+Learn more about FusionTime [here](https://www.froalacharts.com/fusiontime).
 
 import `FusionTime` library to your `ember-cli-build.js` build file:
 
@@ -290,9 +289,8 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  // Import fusioncharts library
-  app.import('node_modules/fusioncharts/fusioncharts.js');
-  app.import('node_modules/fusioncharts/fusioncharts.timeseries.js');
+  // Import froalacharts library
+  app.import('node_modules/froalacharts/froalacharts.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -371,7 +369,7 @@ export default Component.extend({
       const data = res[0];
       const schema = res[1];
       // First we are creating a DataStore
-      const fusionDataStore = new FusionCharts.DataStore();
+      const fusionDataStore = new FroalaCharts.DataStore();
       // After that we are creating a DataTable by passing our data and schema as arguments
       const fusionDataTable = fusionDataStore.createDataTable(data, schema);
       // Afet that we simply mutated our timeseries datasource by attaching the above
@@ -383,12 +381,12 @@ export default Component.extend({
 });
 ```
 
-And use `fusioncharts-xt` component in your `timeseries-viewer.hbs` template to show your charts:
+And use `froalacharts-xt` component in your `timeseries-viewer.hbs` template to show your charts:
 
 ```html
 <h1>{{ title }}</h1>
 
-{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat
+{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat
 dataSource=dataSource}}
 ```
 
@@ -400,8 +398,8 @@ Then, use `timeseries-viewer` component in your `application.hbs` template:
 
 ## Going beyond Charts
 
-- Explore 20+ pre-built business specific dashboards for different industries like energy and manufacturing to business functions like sales, marketing and operations [here](https://www.fusioncharts.com/explore/dashboards).
-- See [Data Stories](https://www.fusioncharts.com/explore/data-stories) built using FusionCharts’ interactive JavaScript visualizations and learn how to communicate real-world narratives through underlying data to tell compelling stories.
+- Explore 20+ pre-built business specific dashboards for different industries like energy and manufacturing to business functions like sales, marketing and operations [here](https://www.froalacharts.com/explore/dashboards).
+- See [Data Stories](https://www.froalacharts.com/explore/data-stories) built using FroalaCharts’ interactive JavaScript visualizations and learn how to communicate real-world narratives through underlying data to tell compelling stories.
 
 ## For Contributors
 
@@ -411,8 +409,8 @@ Then, use `timeseries-viewer` component in your `application.hbs` template:
 - Open `http://localhost:4200/` in your browser.
 
 ```sh
-$ git clone https://github.com/fusioncharts/ember-fusioncharts.git
-$ cd ember-fusioncharts
+$ git clone https://github.com/froalacharts/ember-froalacharts.git
+$ cd ember-froalacharts
 $ npm i && bower install
 $ npm start
 ```
@@ -425,4 +423,4 @@ $ npm run build
 
 ## Licensing
 
-The FusionCharts Ember component is open-source and distributed under the terms of the MIT/X11 License. However, you will need to download and include FusionCharts library in your page separately, which has a [separate license](https://www.fusioncharts.com/buy).
+The FroalaCharts Ember component is open-source and distributed under the terms of the MIT/X11 License. However, you will need to download and include FroalaCharts library in your page separately, which has a [separate license](https://www.froalacharts.com/buy).

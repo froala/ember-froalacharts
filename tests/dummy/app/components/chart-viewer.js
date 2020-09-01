@@ -38,10 +38,10 @@ function getRandomNumber() {
 }
 
 export default Component.extend({
-    title: 'FusionCharts Example',
+    title: 'FroalaCharts Example',
     width: 600,
     height: 400,
-    type: 'column2d',
+    type: 'pie',
     dataFormat: null,
     dataSource: null,
     chartConfig: null,

@@ -1,0 +1,1 @@
+export { default } from 'ember-froalacharts/components/froalacharts-xt';

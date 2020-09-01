@@ -1,28 +1,28 @@
 {
-  "name": "ember-fusioncharts",
+  "name": "ember-froalacharts",
   "version": "2.0.1",
-  "description": "A lightweight EmberJS component which provides bindings for FusionCharts JavaScript Charting Library",
+  "description": "A lightweight EmberJS component which provides bindings for FroalaCharts JavaScript Charting Library",
   "keywords": [
     "ember-addon",
-    "fusioncharts",
+    "froalacharts",
     "bindings",
     "wrapper",
-    "fusioncharts-wrapper"
+    "froalacharts-wrapper"
   ],
   "license": "MIT",
   "author": {
-    "name": "FusionCharts",
-    "email": "support@fusioncharts.com"
+    "name": "FroalaCharts",
+    "email": "support@froalacharts.com"
   },
   "contributors": [
     {
       "name": "Rousan Ali",
-      "email": "rousan@fusioncharts.com",
+      "email": "rousan@froalacharts.com",
       "url": "https://github.com/ariyankhan"
     },
     {
       "name": "Subrata Mal",
-      "email": "subrata@fusioncharts.com",
+      "email": "subrata@froalacharts.com",
       "url": "https://github.com/subratamal"
     }
   ],
@@ -32,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fusioncharts/ember-fusioncharts"
+    "url": "https://github.com/froalacharts/ember-froalacharts"
   },
   "bugs": {
-    "url": "https://github.com/fusioncharts/ember-fusioncharts/issues"
+    "url": "https://github.com/froalacharts/ember-froalacharts/issues"
   },
   "scripts": {
     "build": "ember build",
@@ -67,7 +67,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
-    "fusioncharts": "^3.13.3-sr.1",
+    "froalacharts": "^1.0.4",
     "loader.js": "^4.2.3"
   },
   "engines": {

@@ -2,6 +2,6 @@
 'use strict';
 
 module.exports = {
-    name: 'ember-fusioncharts',
-    description: 'A lightweight EmberJS component which provides bindings for FusionCharts JavaScript Charting Library'
+    name: 'ember-froalacharts',
+    description: 'A lightweight EmberJS component which provides bindings for FroalaCharts JavaScript Charting Library'
 };

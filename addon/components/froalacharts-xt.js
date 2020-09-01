@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import layout from '../templates/components/fusioncharts-xt';
+import layout from '../templates/components/froalacharts-xt';
 import * as utils from '../utils/utils';
 import { fusonChartsOptions } from '../utils/options';
 
@@ -266,7 +266,7 @@ export default Component.extend({
         const currentOptions = this.getCurrentOptions();
         currentOptions.renderAt = this.get('chartContainer');
 
-        const chartObj = this.newFusionChartsInstance(currentOptions);
+        const chartObj = this.newFroalaChartsInstance(currentOptions);
         this.set('chartObj', chartObj);
         chartObj.render();
     },
@@ -312,14 +312,14 @@ export default Component.extend({
         return inlineOptions;
     },
 
-    newFusionChartsInstance(chartConfig) {
-        const fcCore = this.getFusionChartsCore();
+    newFroalaChartsInstance(chartConfig) {
+        const fcCore = this.getFroalaChartsCore();
         return new fcCore(chartConfig);
     },
 
-    getFusionChartsCore() {
+    getFroalaChartsCore() {
         // The root application has to import
-        // the FusionCharts library globally.
-        return window.FusionCharts;
+        // the FroalaCharts library globally.
+        return window.FroalaCharts;
     }
 });

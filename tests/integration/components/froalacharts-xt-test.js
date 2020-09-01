@@ -1,13 +1,13 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('fusioncharts-xt', 'Integration | Component | fusioncharts xt', {
+moduleForComponent('froalacharts-xt', 'Integration | Component | froalacharts xt', {
     integration: true
 });
 
 test('It should render the chart in a div element', function (assert) {
     feedChartConfig(this);
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
     assert.equal(this.$('div').prop("tagName").toUpperCase(), 'DIV');
 });
 
@@ -15,7 +15,7 @@ test(`It should handle the chart dimensions change`, function (assert) {
     feedChartConfig(this);
     this.set('width', '600');
     this.set('height', '400');
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
     this.set('width', '500');
     this.set('height', '300');
     assert.equal(this.get('width'), '500');
@@ -32,7 +32,7 @@ test(`It should handle the chart dimensions change if the width is not specified
     feedChartConfig(this);
     this.set('width', undefined);
     this.set('height', undefined);
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
     this.set('width', '600');
     assert.equal(this.get('width'), '600');
 });
@@ -41,23 +41,23 @@ test(`It should handle the chart dimensions change if the height is not specifie
     feedChartConfig(this);
     this.set('width', undefined);
     this.set('height', undefined);
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
     this.set('height', '400');
     assert.equal(this.get('height'), '400');
 });
 
 test(`It should handle the chart type change for the same value`, function (assert) {
     feedChartConfig(this);
-    this.set('type', 'column2d');
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
-    this.set('type', 'column2d');
-    assert.equal(this.get('type'), 'column2d');
+    this.set('type', 'column');
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.set('type', 'column');
+    assert.equal(this.get('type'), 'column');
 });
 
 test(`It should handle the chart type change for the different value`, function (assert) {
     feedChartConfig(this);
-    this.set('type', 'column2d');
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.set('type', 'column');
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
     this.set('type', 'bar2d');
     assert.equal(this.get('type'), 'bar2d');
 
@@ -68,7 +68,7 @@ test(`It should handle the chart type change for the different value`, function 
 
 test(`It should handle the chart data change for the same value`, function (assert) {
     feedChartConfig(this);
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
     const newData = Object.assign({}, sampleJSONData);
     this.set('dataSource', newData);
     assert.equal(this.get('dataSource'), newData);
@@ -76,7 +76,7 @@ test(`It should handle the chart data change for the same value`, function (asse
 
 test(`It should handle the chart data change for the different value`, function (assert) {
     feedChartConfig(this);
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
     const newData = sampleXMLData;
     this.set('dataFormat', 'xml');
     this.set('dataSource', newData);
@@ -95,7 +95,7 @@ test(`It should handle the chart data change for the different value`, function 
 test(`It should handle the chart data format change for the undefined value`, function (assert) {
     feedChartConfig(this);
     this.set('dataFormat', 'json');
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource}}`);
     this.set('dataFormat', undefined);
     assert.equal(this.get('dataFormat'), undefined);
 });
@@ -106,7 +106,7 @@ test(`It should handle the events option change for the same value`, function (a
     this.set('events', {
         dataPlotRollOver: onDataPlotRollOver
     });
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource events=events}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource events=events}}`);
     const newEvents = {
         dataPlotRollOver: onDataPlotRollOver
     };
@@ -120,7 +120,7 @@ test(`It should handle the events option change for the different value`, functi
     this.set('events', {
         dataPlotRollOver: onDataPlotRollOver
     });
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource events=events}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource events=events}}`);
     onDataPlotRollOver = function() {};
     let newEvents = {
         dataPlotRollOver: onDataPlotRollOver
@@ -146,7 +146,7 @@ test(`It should handle the events option change for the different value`, functi
 test(`It should handle the link option change for the same value`, function (assert) {
     feedChartConfig(this);
     this.set('link', {});
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource link=link}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource link=link}}`);
     const newLink = {};
     this.set('link', newLink);
     assert.equal(this.get('link'), newLink);
@@ -155,7 +155,7 @@ test(`It should handle the link option change for the same value`, function (ass
 test(`It should handle the link option change for the different value`, function (assert) {
     feedChartConfig(this);
     this.set('link', null);
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource link=link}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource link=link}}`);
     const newLink = {};
     this.set('link', newLink);
     assert.equal(this.get('link'), newLink);
@@ -164,7 +164,7 @@ test(`It should handle the link option change for the different value`, function
 test(`It should handle the rest options change`, function (assert) {
     feedChartConfig(this);
     this.set('chartConfig', undefined);
-    this.render(hbs`{{fusioncharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource chartConfig=chartConfig}}`);
+    this.render(hbs`{{froalacharts-xt width=width height=height type=type dataFormat=dataFormat dataSource=dataSource chartConfig=chartConfig}}`);
     this.set('chartConfig', {
         containerBackgroundColor: '#000000'
     });
@@ -179,7 +179,7 @@ test(`It should handle the rest options change`, function (assert) {
 function feedChartConfig(comp) {
     comp.set('width', 600);
     comp.set('height', 400);
-    comp.set('type', 'column2d');
+    comp.set('type', 'column');
     comp.set('dataFormat', 'json'); 
     comp.set('dataSource', sampleJSONData);
 }

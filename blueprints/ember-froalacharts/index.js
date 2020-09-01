@@ -3,6 +3,6 @@ module.exports = {
     normalizeEntityName() { }
 
     // afterInstall() {
-    //     return this.addPackageToProject('fusioncharts');
+    //     return this.addPackageToProject('froalacharts');
     // },
 };

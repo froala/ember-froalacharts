@@ -103,7 +103,7 @@ const fusonChartsOptions = [
 ];
 
 /* global App, Ember */
-App.FusionchartsXtComponent = Ember.Component.extend({
+App.FroalachartsXtComponent = Ember.Component.extend({
     tag: 'div',
     chartObj: null,
     oldOptions: null,
@@ -340,7 +340,7 @@ App.FusionchartsXtComponent = Ember.Component.extend({
         const currentOptions = this.getCurrentOptions();
         currentOptions.renderAt = this.get('chartContainer');
 
-        const chartObj = this.newFusionChartsInstance(currentOptions);
+        const chartObj = this.newFroalaChartsInstance(currentOptions);
         this.set('chartObj', chartObj);
         chartObj.render();
     },
@@ -375,14 +375,14 @@ App.FusionchartsXtComponent = Ember.Component.extend({
         return inlineOptions;
     },
 
-    newFusionChartsInstance(chartConfig) {
-        const fcCore = this.getFusionChartsCore();
+    newFroalaChartsInstance(chartConfig) {
+        const fcCore = this.getFroalaChartsCore();
         return new fcCore(chartConfig);
     },
 
-    getFusionChartsCore() {
+    getFroalaChartsCore() {
         // The root application has to import
-        // the FusionCharts library globally.
-        return window.FusionCharts;
+        // the FroalaCharts library globally.
+        return window.FroalaCharts;
     }
 });

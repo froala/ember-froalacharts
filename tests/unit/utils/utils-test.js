@@ -1,6 +1,6 @@
 
 import { module, test } from 'qunit';
-import * as utils from 'ember-fusioncharts/utils/utils';
+import * as utils from 'ember-froalacharts/utils/utils';
 
 module('Unit | Utility | Utils');
 
