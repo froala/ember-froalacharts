@@ -49,12 +49,12 @@ export default Component.extend({
       const data = res[0];
       const schema = res[1];
       // First we are creating a DataStore
-      const fusionDataStore = new FroalaCharts.DataStore();
+      const froalaDataStore = new FroalaCharts.DataStore();
       // After that we are creating a DataTable by passing our data and schema as arguments
-      const fusionDataTable = fusionDataStore.createDataTable(data, schema);
+      const froalaDataTable = froalaDataStore.createDataTable(data, schema);
       // Afet that we simply mutated our timeseries datasource by attaching the above
       // DataTable into its data property.
-      dataSource.data = fusionDataTable;
+      dataSource.data = froalaDataTable;
       this.set('dataSource', dataSource);
     });
   },
