@@ -144,13 +144,13 @@ export default Component.extend({
   title: 'Ember FroalaCharts Sample',
   width: 600,
   height: 400,
-  type: 'column2d',
+  type: 'pie',
   dataFormat: 'json',
   dataSource: myDataSource
 });
 ```
 
-And use `froalacharts-xt` component in your `chart-viewer.hbs` template to show your charts:
+And use `froalacharts` component in your `chart-viewer.hbs` template to show your charts:
 
 ```html
 <h1>{{ title }}</h1>
@@ -175,7 +175,7 @@ import Component from '@ember/component';
 export default Component.extend({
   width: 600,
   height: 400,
-  type: 'column2d',
+  type: 'pie',
   dataFormat: 'json',
   dataSource: {
     chart: {
@@ -261,7 +261,7 @@ Using this example when you hover on a dataplot you will get to see the value an
 
 ## Working with events
 
-To attach event listeners to FroalaCharts, you can use the `events` attribute in the `froalacharts-xt` template.
+To attach event listeners to FroalaCharts, you can use the `events` attribute in the `froalacharts` template.
 
 In your template file:
 
@@ -272,7 +272,7 @@ dataSource=dataSource events=events}}
 
 ## Usage and integration of FroalaTime
 
-From `froalacharts@1.0.4` and `ember-froalacharts@2.0.0`, You can visualize timeseries data easily with vue.
+From `froalacharts@1.0.4` and `ember-froalacharts@1.0.0`, You can visualize timeseries data easily with vue.
 
 Learn more about FroalaTime [here](https://www.fusioncharts.com/fusiontime).
 
@@ -381,7 +381,7 @@ export default Component.extend({
 });
 ```
 
-And use `froalacharts-xt` component in your `timeseries-viewer.hbs` template to show your charts:
+And use `froalacharts` component in your `timeseries-viewer.hbs` template to show your charts:
 
 ```html
 <h1>{{ title }}</h1>
