@@ -1,6 +1,6 @@
 # Ember-FroalaCharts
 
-A lightweight EmberJS component which provides bindings for FusionCharts JavaScript Charting Library. It easily adds rich and interactive charts to any ambitious Ember application.
+A lightweight EmberJS component which provides bindings for FroalaCharts JavaScript Charting Library. It easily adds rich and interactive charts to any ambitious Ember application.
 
 ## [Demo](https://fusioncharts.github.io/ember-fusioncharts/)
 
