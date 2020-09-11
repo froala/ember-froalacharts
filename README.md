@@ -2,7 +2,7 @@
 
 A lightweight EmberJS component which provides bindings for FroalaCharts JavaScript Charting Library. It easily adds rich and interactive charts to any ambitious Ember application.
 
-## [Demo](https://fusioncharts.github.io/ember-fusioncharts/)
+## [Demo](https://github.com/froala/ember-froalacharts/blob/master/README.md#demo)
 
 - Github Repo: [https://github.com/froala/ember-froalacharts](https://github.com/froala/ember-froalacharts)
 - Documentation: [https://www.fusioncharts.com/dev/getting-started/ember/your-first-chart-using-ember](https://www.fusioncharts.com/dev/getting-started/ember/your-first-chart-using-ember)
@@ -423,4 +423,4 @@ $ npm run build
 
 ## Licensing
 
-The FroalaCharts Ember component is open-source and distributed under the terms of the MIT/X11 License. However, you will need to download and include FroalaCharts library in your page separately, which has a [separate license](https://www.fusioncharts.com/buy).
+The FroalaCharts Ember component is open-source and distributed under the terms of the MIT/X11 License. However, you will need to download and include FroalaCharts library in your page separately, which has a [separate license](https://github.com/froala/ember-froalacharts/blob/master/README.md#licensing).
