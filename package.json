@@ -1,41 +1,37 @@
 {
   "name": "ember-froalacharts",
   "version": "1.0.0",
-  "description": "A lightweight EmberJS component which provides bindings for FroalaCharts JavaScript Charting Library",
+  "description": "Simple and lightweight official Ember component for FroalaCharts.",
   "keywords": [
-    "ember-addon",
+    "Ember",
+    "ember-froalacharts-component",
+    "ember-froalacharts",
     "froalacharts",
-    "bindings",
-    "wrapper",
-    "froalacharts-wrapper"
+    "javascript-charts",
+    "interactive-charts",
+    "charts",
+    "graphs",
+    "visualization",
+    "data-visualization",
+    "dataviz",
+    "ember-charts"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/froala/ember-froalacharts",
   "author": {
-    "name": "FusionCharts, Inc.",
+    "name": "froala",
     "email": "support@froala.com"
   },
-  "contributors": [
-    {
-      "name": "Rousan Ali",
-      "email": "rousan@froalacharts.com",
-      "url": "https://github.com/ariyankhan"
-    },
-    {
-      "name": "Subrata Mal",
-      "email": "subrata@froalacharts.com",
-      "url": "https://github.com/subratamal"
-    }
-  ],
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/froalacharts/ember-froalacharts"
+    "url": "https://github.com/froala/ember-froalacharts"
   },
   "bugs": {
-    "url": "https://github.com/froalacharts/ember-froalacharts/issues"
+    "url": "https://github.com/froala/ember-froalacharts/issues"
   },
   "scripts": {
     "build": "ember build",
@@ -67,7 +63,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
-    "froalacharts": "^1.0.6",
+    "froalacharts": "^1.0.0",
     "loader.js": "^4.2.3"
   },
   "engines": {
